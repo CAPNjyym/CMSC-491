@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Jyym Culpepper
+	CMSC 491
+	Spring 2012 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<title>Products and Services</title>
+		<script type="text/javascript" src="js/validateForms.js"></script>
+		<script type="text/javascript" src="js/beautify.js"></script>
+	</head>
+	
+	<body onload="initLogo()">
+		<table width="1000" border="0">
+			<tr>
+				<th id="header" colspan="2">
+					<h1> <img src="images/order.jpg" id="title" height="375" alt="Order a Squirtle Squad Product or Service" style="position: relative; left: 0px; top: 5px;" /> </h1>
+				</th>
+			</tr>
+		
+			<tr valign="top">
+				<td style="width:151px" id="nav">
+					<a href="index.html" id="link1" onmouseover="lookAtLink(1)" onmouseout="unlookAtLink(1)"> Home </a> <br />
+					<a href="comment.html" id="link2" onmouseover="lookAtLink(2)" onmouseout="unlookAtLink(2)"> Talk about some stuff! </a> <br />
+					<a href="donate.html" id="link3" onmouseover="lookAtLink(3)" onmouseout="unlookAtLink(3)"> Give us your money! </a> <br />
+					<span style="font-weight:bold">Order a product!</span><br />
+					<a href="check.html" id="link5" onmouseover="lookAtLink(5)" onmouseout="unlookAtLink(5)"> Check your Order! </a> <br />
+					<a href="images/link.png" id="link6" onmouseover="lookAtLink(6)" onmouseout="unlookAtLink(6)"> Link Here! </a>
+					
+					<p><br />
+						Select a color style: <br />
+						<input type="radio" name="BGcolor" value="blue" checked="checked" onclick="changeColors(1)" /> Squirtle Blue <br />
+						<input type="radio" name="BGcolor" value="yellow" onclick="changeColors(2)" /> Undershell Yellow <br />
+						<input type="radio" name="BGcolor" value="brown" onclick="changeColors(3)" /> Shell Brown <br />
+						<input type="radio" name="BGcolor" value="black" onclick="changeColors(4)" /> Shade Black <br />
+						<br /> <br /> Position the title image: <br />
+						x: <input type="text" id="titleX" size="1" maxlength="3" value="245" style="position: relative; left: 0px; top: 0px;" onblur="move()" />  px (0-490) <br />
+						y: <input type="text" id="titleY" size="1" maxlength="2" value="25" style="position: relative; left: 0px; top: 0px;" onblur="move()" /> px (0 - 50)
+					</p>
+				</td>
+				<td id="main">
+					<h2>Order a magnificent Squirtle Squad Product or Service!</h2>
+					<form action="" method="get" onsubmit="return validate()">
+						<table id="products" border="7">
+							<tr>
+								<th colspan="2"> Squirtle!  Squirtle! </th>
+							</tr>
+							<tr>
+								<td>
+									<img src="images/graffiti.png" alt="Squirtle Graffiti" width="400" />
+								</td>
+								<td>
+									<img src="images/submarine.gif" alt="Squirtle Submarines" width="400" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Graffiti: Perfect for annoying neighbors and causing all kinds of mischief!
+								</td>
+								<td>
+									Squirtle Submarines: Suprise a group of unsuspecting kids!
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span style="font-weight:bold">Price:</span> $100000&#8194;&#8194;
+									<span style="font-weight:bold">Weight: </span> N/A&#8194;&#8194;
+									<span style="font-weight:bold">Quantity:</span> <input type="text" name="prod1" size="3" maxlength="3" value="0" onblur="validateRange(1)" />
+									<input type="text" name="prod1Ex" size="3" maxlength="3" disabled="disabled" style="display:none" value="2" />
+								</td>
+								<td>
+									<span style="font-weight:bold">Price:</span> $300000&#8194;&#8194;
+									<span style="font-weight:bold">Weight: </span> 20.0 lbs&#8194;&#8194;
+									<span style="font-weight:bold">Quantity:</span> <input type="text" name="prod2" size="3" maxlength="3" value="0" onblur="validateRange(2)" />
+									<input type="text" name="prod2Ex" size="3" maxlength="3" disabled="disabled" style="display:none" value="1" />
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<img src="images/shades.gif" alt="Squirtle Shades" width="400" />
+								</td>
+								<td>
+									<img src="images/water gun.gif" alt="Squirtle Water Gun" width="400" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Squirtle Shades: Look cool!  Plus keep all the nasty UV rays out of your face!
+								</td>
+								<td>
+									Water Gun (TM12): A 100% free source of water that can be used for practically anything!
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span style="font-weight:bold">Price:</span> $1000000&#8194;&#8194;
+									<span style="font-weight:bold">Weight: </span> 0.2 lbs&#8194;&#8194;
+									<span style="font-weight:bold">Quantity:</span> <input type="text" name="prod3" size="3" maxlength="3" value="0" onblur="validateRange(3)" />
+									<input type="text" name="prod3Ex" size="3" maxlength="3" disabled="disabled" style="display:none" value="0" />
+								</td>
+								<td>
+									<span style="font-weight:bold">Price:</span> $250000&#8194;&#8194;
+									<span style="font-weight:bold">Weight: </span> 0.0 lbs&#8194;&#8194;
+									<span style="font-weight:bold">Quantity:</span> <input type="text" name="prod4" size="3" maxlength="3" value="0" onblur="validateRange(4)" />
+									<input type="text" name="prod4Ex" size="3" maxlength="3" disabled="disabled" style="display:none" value="3" />
+								</td>
+							</tr>
+						</table>
+						<p><br /></p>
+						<table>
+							<tr>
+								<td>
+									Your Name:
+								</td>
+								<td>
+									<input type="text" name="name" size="32" onblur="validateName()" />
+									<input type="text" name="nameEx" size="32" disabled="disabled" style="display:none" value="First M. Last" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Your Address:
+								</td>
+								<td>
+									<input type="text" name="address1" size="32" onblur="validateAddress()" />
+									<input type="text" name="address1Ex" size="32" disabled="disabled" style="display:none" value="1234 Address Street" /> <br />
+									<input type="text" name="address2" size="32" />
+									<input type="text" name="address2Ex" size="32" disabled="disabled" style="display:none" value="Unrequired, NA 56789" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Credit Card Company:
+								</td>
+								<td>
+									<input type="radio" name="cardComp" value="visa" checked="checked"/> Visa
+									<input type="radio" name="cardComp" value="master_charge" /> Master Charge
+									<input type="radio" name="cardComp" value="discover" /> Discover
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Credit Card Number:
+								</td>
+								<td>
+									<input type="text" name="cardNum" size="19" maxlength="19" onblur="validateCard()" />
+									<input type="text" name="cardNumEx" size="19" maxlength="19" disabled="disabled" style="display:none" value="1234-3456-5678-7890"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Phone Number:
+								</td>
+								<td>
+									<input type="text" name="phone" size="11" maxlength="12" onblur="validatePhone()" />
+									<input type="text" name="phoneEx" size="11" maxlength="12" disabled="disabled" style="display:none" value="123-456-7890"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Email Address:
+								</td>
+								<td>
+									<input type="text" name="email" size="32" onblur="validateEmail()" />
+									<input type="text" name="emailEx" size="32"  disabled="disabled" style="display:none" value="email@address"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Optional Accessories:
+								</td>
+								<td>
+									<input type="checkbox" name="accessories" value="acc1" /> Squirtle Keychain ($1000 extra) <br />
+									<input type="checkbox" name="accessories" value="acc2" /> Squirtle Eraser ($1000 extra) <br />
+									<input type="checkbox" name="accessories" value="acc3" /> Squirtle Doll ($3000 extra) <br />
+									<input type="checkbox" name="accessories" value="acc4" /> Squirtle Bobblehead ($2000 extra) <br />
+									<input type="checkbox" name="accessories" value="acc5" /> Squirtle Rope ($5000 extra) <br />
+									<input type="checkbox" name="accessories" value="acc6" /> Slowpoke Tail ($1000000 extra) <br />
+								</td>
+							</tr>
+						</table>
+						<p>
+							<input type="submit" name="order" value="ORDER!" />
+							<input type="reset" name="reset" value="Reset All Fields" />
+							<input type="button" name="exampleButton" value="See Example" onclick="example()" />
+							<input type="button" name="closeButton" style="display:none" value="Close Example" onclick="closeExample()" />
+						</p>
+					</form>
+				</td>
+			</tr>
+			
+			<tr>
+				<td id="footer" colspan="2">
+					<p> <img id="logo" src="images/logo.jpg" alt="Squirtle Squad" style="position: relative; left: 0px; top: 0px;" /> <br />
+						Jyym Culpepper <br />
+						CMSC 491 <br />
+						Spring 2012
+					</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

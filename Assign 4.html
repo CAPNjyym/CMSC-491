@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Jyym Culpepper
+	CMSC 491
+	Spring 2012 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>CMSC491 Assign #4 - J. Culpepper</title>
+		<script type="text/javascript">
+			<!--// displays prompt for entering text
+			function promptText(){
+				var text = prompt("Please enter some text","");
+				
+				document.getElementById("textEntered").innerHTML = "Text entered:<br />" + text;
+				
+				if (text == null){
+					text = "";
+				}
+				
+				// removes tabs, trims the text of leading and trailing spaces
+				while (text.indexOf("	") > -1){
+					text = text.replace("	", " ");
+				}
+				while (text.charAt(0) == " "){
+					text = text.substr(1);
+				}
+				while (text.charAt(text.length - 1) == " "){
+					text = text.substr(0, text.length - 1);
+				}
+				
+				output(text);
+			}
+			
+			// calculates the output and then outputs the stats and word table
+			function output(text){
+				var words = text.split(" "), unique = organize(text), chars = text, count = 0;
+				
+				if (unique == ""){
+					words = new Array();
+					unique = new Array();
+				}
+				
+				var stats = "Number of words: " + words.length + "<br />Number of unique words: ",
+					wordTable = "<caption>Unique Word Counts</caption><tr><th>Word</th><th>Count</th></tr>";
+				
+				for (i=0; i<unique.length; i++){
+					count = 1;
+					
+					while (i + 1 < unique.length && unique[i] == unique[i + 1]){
+						count++;
+						unique.splice(i, 1);
+					}
+					
+					wordTable += "<tr><td>" + unique[i] + "</td><td align=\"center\">" + count + "</td></tr>";
+				}
+				
+				stats += unique.length + "<br />Number of printable characters: ";
+				while (chars.indexOf(" ") > -1){
+					chars = chars.replace(" ", "");
+				}
+				stats += chars.length;
+				
+				document.getElementById("stats").innerHTML = stats;
+				document.getElementById("wordTable").innerHTML = wordTable;
+				document.getElementById("wordTable").style.visibility = "visible";
+			}
+			
+			// takes the sentence and converts it into an array suitable for the words table and unique words count
+			function organize(text){
+				var words = text;
+				
+				for (i=0; i<words.length; i++){
+					code = words.charCodeAt(i);
+					
+					if (code != 32 && code != 39 && (code < 65 || (code > 90 && code < 97) || code > 122)){
+						words = words.substring(0, i).concat(words.substring(i + 1));
+						i -= 1;
+					}
+				}
+				
+				return words.split(" ").sort();
+			}//-->
+		</script>
+	</head>
+	
+	<body onload="promptText()">
+		<h1> CMSC491 Assign #4 - J. Culpepper </h1>
+		<p id="textEntered" />
+		<p id="stats" />
+		<table id="wordTable" border="1" style="visibility:hidden"><tr><td /></tr></table>
+	</body>
+</html>
+

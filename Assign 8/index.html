@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Jyym Culpepper
+	CMSC 491
+	Spring 2012 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<title>The Squirtle Squad</title>
+		<script type="text/javascript" src="js/beautify.js"></script>
+	</head>
+	
+	<body onload="initLogo()">
+		<table width="1000" border="0">
+			<tr>
+				<th id="header" colspan="2">
+					<h1> <img src="images/welcome.jpg" id="title" height="375" alt="Welcome to the Squirtle Squad" style="position: relative; left: 0px; top: 5px;" /> </h1>
+				</th>
+			</tr>
+		
+			<tr valign="top">
+				<td style="width:151px" id="nav">
+					<span style="font-weight:bold">Home</span><br />
+					<a href="comment.html" id="link2" onmouseover="lookAtLink(2)" onmouseout="unlookAtLink(2)"> Talk about some stuff! </a> <br />
+					<a href="donate.html" id="link3" onmouseover="lookAtLink(3)" onmouseout="unlookAtLink(3)"> Give us your money! </a> <br />
+					<a href="order.html" id="link4" onmouseover="lookAtLink(4)" onmouseout="unlookAtLink(4)"> Order a product! </a> <br />
+					<a href="check.html" id="link5" onmouseover="lookAtLink(5)" onmouseout="unlookAtLink(5)"> Check your Order! </a> <br />
+					<a href="images/link.png" id="link6" onmouseover="lookAtLink(6)" onmouseout="unlookAtLink(6)"> Link Here! </a>
+					
+					<p> <br />
+						Select a color style: <br />
+						<input type="radio" name="BGcolor" value="blue" checked="checked" onclick="changeColors(1)" /> Squirtle Blue <br />
+						<input type="radio" name="BGcolor" value="yellow" onclick="changeColors(2)" /> Undershell Yellow <br />
+						<input type="radio" name="BGcolor" value="brown" onclick="changeColors(3)" /> Shell Brown <br />
+						<input type="radio" name="BGcolor" value="black" onclick="changeColors(4)" /> Shade Black <br />
+						<br /> <br /> Position the title image: <br />
+						x: <input type="text" id="titleX" size="1" maxlength="3" value="245" style="position: relative; left: 0px; top: 0px;" onblur="move()" />  px (0-490) <br />
+						y: <input type="text" id="titleY" size="1" maxlength="2" value="25" style="position: relative; left: 0px; top: 0px;" onblur="move()" /> px (0 - 50)
+					</p>
+				</td>
+				<td id="main">
+					<h2>Products and Services offered by The Squirtle Squad!</h2>
+					<table id="products" border="7">
+						<tr>
+							<th colspan="2"> Squirtle!  Squirtle! </th>
+						</tr>
+						
+						<tr>
+							<td style="border-style: hidden;" >
+								<img id="img1" src="images/graffiti.png" alt="Squirtle Graffiti" width="400" style="position: relative; left: 100px; top: 75px; z-index: 4;" onclick="topStack(1)" />
+								<img id="img3" src="images/shades.gif" alt="Squirtle Shades" width="400" style="position: relative; left: 100px; top: -75px; z-index: 2;" onclick="topStack(3)" />
+							</td>
+							<td style="border-style: hidden;" >
+								<img id="img2" src="images/submarine.gif" alt="Squirtle Submarines" width="400" style="position: relative; left: -100px; top: 53px; z-index: 3;" onclick="topStack(2)" />
+								<img id="img4" src="images/water gun.gif" alt="Squirtle Water Gun" width="400" style="position: relative; left: -100px; top: -53px; z-index: 1;" onclick="topStack(4)" />
+							</td>
+						</tr>
+						
+						<tr style="text-align: center;">
+							<td id="desc" colspan="2" >
+								Graffiti: Perfect for annoying neighbors and causing all kinds of mischief!
+							</td>
+						</tr>
+					</table>
+					
+					<h3 onmouseover="show()" onmouseout="hide()"> Additional Purchase Information </h3>
+					<table id="api" style="visibility: hidden;" border="1">
+						<tr>
+							<th> Fun Squirtle Facts </th>
+							<th> Squirtle Accessories that may be purchased along with the above products </th>
+						</tr>
+						<tr>
+							<td>
+								<ol>
+									<li> Squirtle is #007 </li>
+									<li> Squirrel/Squirt + Turtle = Squirtle </li>
+									<li> The Japanese name for Squirtle is pronounced <span style="font-style: italic">Zenigame</span></li>
+								</ol>
+							</td>
+							<td>
+								<ul>
+									<li> Squirtle Keychains </li>
+									<li> Squirtle Erasers </li>
+									<li> Squirtle Dolls </li>
+									<li> Squirtle Bobbleheads </li>
+									<li> Squirtle Rope (for tying people up) </li>
+									<li> Slowpoke Tails... No... Wait... I mean... Umm...</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+					
+					<div style="color: rgb(142,70,30);">
+						<h4 id="limitedOffer" style="visibility: hidden;"> <br />
+							<span style="color:white">NOTE:</span> Special limited time offer! <br />
+							Buy any Squirtle product or service and get 1 <span style="color:white">FREE*</span> Squirtle Accessory! <br />
+							<span style="color:white">*Full Retail Extra Expensive</span> <br />
+						</h4>
+					</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td id="footer" colspan="2">
+					<p> <img id="logo" src="images/logo.jpg" alt="Squirtle Squad" style="position: relative; left: 0px; top: 0px;" /> <br />
+						Jyym Culpepper <br />
+						CMSC 491 <br />
+						Spring 2012
+					</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+/*  Jyym Culpepper
+	CMSC 491
+	Spring 2012 */
+
+body{
+	background-color:		rgb(140,197,206);
+	background-image:		url('images/Squirtle BG.jpg');
+	background-repeat:		no-repeat;
+	background-position:	left bottom;
+	background-attachment:	fixed;
+	
+	margin-top:				0px;
+	margin-left: 			0px;
+	margin-bottom: 			0px;
+	margin-right: 			0px;
+	
+	cursor:					url('cursors/squirtle.cur'), progress !important;
+}
+h2{
+	text-align:				center;
+}
+ol{
+	list-style-type:		hiragana;
+}
+ul{
+	list-style-type:		katakana;
+}
+
+/* Sections of the page */
+#header{
+	background-color:		white;
+	
+	font:					oblique normal 900 100% "Comic Sans MS", cursive, sans-serif;
+}
+#nav{
+	background-color:		rgb(255,214,108);
+	width:					300px;
+}
+#main{
+	background-color:		rgb(140,197,206);
+	width:					700px;
+	
+	font-family:			"Veranda", "Geneva", sans-serif;
+}
+#footer{
+	color:					white;
+	background-color:		rgb(189,108,1);
+	
+	padding-left: 			18px;
+	padding-bottom: 		5px;
+	padding-right: 			18px;
+	
+	text-align:				center;
+}
+#logo{
+	float:					left;
+}
+#products{	
+	border-style:			ridge;
+	border-color:			rgb(189,108,1);
+}
+#limitedOffer{
+	font-size:				90%;
+	font-style:				oblique;
+	font-weight:			700;
+	
+	text-decoration:		blink;
+}
+

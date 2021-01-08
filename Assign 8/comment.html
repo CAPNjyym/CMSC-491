@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Jyym Culpepper
+	CMSC 491
+	Spring 2012 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<title>Comments and Customer Reviews</title>
+		<script type="text/javascript" src="js/beautify.js"></script>
+	</head>
+	
+	<body onload="initLogo()">
+		<table width="1000" border="0">
+			<tr>
+				<th id="header" colspan="2">
+					<h1> <img src="images/comments.jpg" id="title" height="375" alt="Comments and Customer Reviews" style="position: relative; left: 0px; top: 5px;" /> </h1>
+				</th>
+			</tr>
+		
+			<tr valign="top">
+				<td style="width:128px" id="nav">
+					<a href="index.html" id="link1" onmouseover="lookAtLink(1)" onmouseout="unlookAtLink(1)"> Home </a> <br />
+					<span style="font-weight:bold"> Talk about some stuff!</span><br />
+					<a href="donate.html" id="link3" onmouseover="lookAtLink(3)" onmouseout="unlookAtLink(3)"> Give us your money! </a> <br />
+					<a href="order.html" id="link4" onmouseover="lookAtLink(4)" onmouseout="unlookAtLink(4)"> Order a product! </a> <br />
+					<a href="check.html" id="link5" onmouseover="lookAtLink(5)" onmouseout="unlookAtLink(5)"> Check your Order! </a> <br />
+					<a href="images/link.png" id="link6" onmouseover="lookAtLink(6)" onmouseout="unlookAtLink(6)"> Link Here! </a>
+					
+					<p> <br />
+						Select a color style: <br />
+						<input type="radio" name="BGcolor" value="blue" checked="checked" onclick="changeColors(1)" /> Squirtle Blue <br />
+						<input type="radio" name="BGcolor" value="yellow" onclick="changeColors(2)" /> Undershell Yellow <br />
+						<input type="radio" name="BGcolor" value="brown" onclick="changeColors(3)" /> Shell Brown <br />
+						<input type="radio" name="BGcolor" value="black" onclick="changeColors(4)" /> Shade Black <br />
+						<br /> <br /> Position the title image: <br />
+						x: <input type="text" id="titleX" size="1" maxlength="3" value="245" style="position: relative; left: 0px; top: 0px;" onblur="move()" />  px (0-490) <br />
+						y: <input type="text" id="titleY" size="1" maxlength="2" value="25" style="position: relative; left: 0px; top: 0px;" onblur="move()" /> px (0 - 50)
+					</p>
+				</td>
+				<td id="main">
+					
+					<p> If you have any comments or opinions, please <br />
+						feel free to keep them to yourself.  [Free item <br />
+						if you can tell me what show that is from!] <br /> </p>
+					
+					<h4> Displaying 0 of 0 comments</h4>
+					<p> Be the first to comment! <br /> </p>
+					
+					<p>
+						<textarea cols="40" rows="15">Input Comment Here</textarea> <br />
+						<input type="submit" value="Submit" />
+					</p>
+				</td>
+			</tr>
+			
+			<tr>
+				<td id="footer" colspan="2">
+					<p> <img id="logo" src="images/logo.jpg" alt="Squirtle Squad" style="position: relative; left: 0px; top: 0px;" /> <br />
+						Jyym Culpepper <br />
+						CMSC 491 <br />
+						Spring 2012
+					</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
